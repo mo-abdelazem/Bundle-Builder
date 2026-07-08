@@ -15,6 +15,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+.claude/
 .idea
 .DS_Store
 *.suo
@@ -22,6 +23,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Local planning notes (not part of deliverable)
-bundle-builder-guide.md

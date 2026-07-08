@@ -44,6 +44,9 @@ export default function QuantityStepper({
   const incStyle =
     variant === 'review' ? 'bg-white text-[#575757]' : 'bg-[#F0F4F7] text-[#525963]';
   const decStyle = variant === 'review' ? incStyle : DEC;
+  // Match the value to the price size of its surface (review lines are 12/14px).
+  const valueSize =
+    variant === 'review' ? 'text-[12px] leading-4 sm:text-[14px]' : 'text-[16px] leading-5';
 
   return (
     <div className="inline-flex select-none items-center gap-2">
@@ -56,7 +59,7 @@ export default function QuantityStepper({
       >
         {MinusIcon}
       </button>
-      <span className="min-w-4 text-center text-[16px] font-medium leading-5 tabular-nums text-[#0B0D10]">
+      <span className={`min-w-4 text-center font-medium tabular-nums text-[#0B0D10] ${valueSize}`}>
         {value}
       </span>
       <button

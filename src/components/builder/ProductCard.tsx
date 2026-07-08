@@ -15,9 +15,10 @@ export default function ProductCard({ product }: { product: Product }) {
   const variant =
     product.variants.find((v) => v.id === activeId) ?? product.variants[0];
   const qty = getQty(selection, product.id, activeId);
-  const selected = product.variants.some(
-    (v) => getQty(selection, product.id, v.id) > 0,
-  );
+  const addedIds = product.variants
+    .filter((v) => getQty(selection, product.id, v.id) > 0)
+    .map((v) => v.id);
+  const selected = addedIds.length > 0;
   const hasVariants = product.variants.some((v) => v.label !== null);
 
   return (
@@ -59,6 +60,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <VariantSelector
             variants={product.variants}
             activeId={activeId}
+            addedIds={addedIds}
             onSelect={(id) => setActiveVariant(product.id, id)}
           />
         )}

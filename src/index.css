@@ -105,3 +105,11 @@ body {
 :where(button, [role="button"], a, label, summary):not(:disabled) {
   cursor: pointer;
 }
+
+/* Variant chip shows the active (green) state on hover/focus; reverts otherwise.
+   Added chips carry the green class inline, so they stay green regardless. */
+.variant-chip:hover,
+.variant-chip:focus {
+  border-color: var(--color-savings);
+  background-color: #1df0bb0a;
+}

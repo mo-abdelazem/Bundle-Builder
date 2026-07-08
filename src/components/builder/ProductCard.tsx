@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <article
-      className={`relative flex flex-col gap-[13px] rounded-card bg-white p-[11px] transition-colors min-[1292px]:flex-row min-[1292px]:items-center min-[1292px]:gap-3 ${
+      className={`relative rounded-card bg-white p-[11px] transition-colors ${
         selected ? 'border-2 border-selected' : 'border-2 border-transparent'
       }`}
     >
@@ -31,17 +31,16 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.badge}
         </span>
       )}
-      <div className="min-[1292px]:shrink-0">
-        <img
-          src={product.image}
-          alt={product.title}
-          className={`mx-auto h-32 w-full object-contain min-[1292px]:mx-0 min-[1292px]:h-[100px] min-[1292px]:w-[100px] min-[1292px]:min-w-[100px] min-[1292px]:object-center ${
-            product.badge ? 'object-right' : ''
-          }`}
-        />
-      </div>
+      <div className="flex flex-col gap-[13px] @max-[394px]/grid:flex-row @max-[394px]/grid:items-center @max-[394px]/grid:gap-3 min-[1292px]:flex-row min-[1292px]:items-center min-[1292px]:gap-3">
+        <div className="@max-[394px]/grid:shrink-0 min-[1292px]:shrink-0">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="mx-auto h-32 w-full object-contain object-center @max-[394px]/grid:mx-0 @max-[394px]/grid:h-[100px] @max-[394px]/grid:w-[100px] @max-[394px]/grid:min-w-[100px] min-[1292px]:mx-0 min-[1292px]:h-[100px] min-[1292px]:w-[100px] min-[1292px]:min-w-[100px]"
+          />
+        </div>
 
-      <div className="flex min-w-0 flex-1 flex-col gap-2 @container/pcard">
+        <div className="flex min-w-0 flex-1 flex-col gap-2 @container/pcard">
         <h3 className="text-base font-semibold tracking-[0.6px] text-ink-card">
           {product.title}
         </h3>
@@ -78,6 +77,7 @@ export default function ProductCard({ product }: { product: Product }) {
             compareAt={variant.compareAt}
             className="shrink-0 text-base @max-[195px]/pcard:flex-col @max-[195px]/pcard:items-end"
           />
+        </div>
         </div>
       </div>
     </article>

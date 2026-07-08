@@ -33,8 +33,9 @@ function App() {
         </section>
 
         <aside
+          id="review"
           aria-label="Your security system"
-          className="min-[1292px]:sticky min-[1292px]:top-8 min-[1292px]:self-start"
+          className="min-[1292px]:scroll-mt-8 min-[1292px]:sticky min-[1292px]:top-8 min-[1292px]:self-start"
         >
           <ReviewPanel />
         </aside>

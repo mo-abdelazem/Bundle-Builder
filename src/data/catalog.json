@@ -137,7 +137,7 @@
     {
       "id": "cam-unlimited",
       "name": "Cam Unlimited",
-      "logo": "/img/Cam_Unlimited.webp",
+      "logo": "/icons/cam_unlimited.svg",
       "price": 9.99,
       "compareAt": 12.99,
       "period": "mo"

@@ -181,7 +181,7 @@ export default function ReviewPanel() {
                 alt="Satisfaction guarantee"
                 className="h-[78px] w-[78px] shrink-0 @min-[820px]:hidden"
               />
-              <div className="ml-auto flex flex-col items-end gap-2 min-[640px]:w-full min-[640px]:flex-row min-[640px]:items-center min-[640px]:justify-between min-[640px]:gap-6 min-[640px]:max-w-[500px] min-[1292px]:w-auto min-[1292px]:max-w-none min-[1292px]:flex-col min-[1292px]:items-end min-[1292px]:gap-2">
+              <div className="ml-auto flex flex-col items-end gap-2 min-[640px]:w-full min-[640px]:flex-row min-[640px]:items-center min-[640px]:justify-between min-[640px]:gap-6 min-[640px]:max-w-[480px] min-[1292px]:w-auto min-[1292px]:max-w-none min-[1292px]:flex-col min-[1292px]:items-end min-[1292px]:gap-2">
                 <span className="inline-block rounded-md bg-primary px-2 py-1 text-xs font-medium tracking-[-0.05em] text-white">
                   as low as {money(totals.financingPerMonth)}/mo
                 </span>
